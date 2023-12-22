@@ -138,8 +138,8 @@ section{
 }
 
 .header .navbar a{
-   font-size: 2rem;
-   font-weight: 600;
+   font-size: 1.5rem;
+   font-weight: 400;
    margin-left: 2rem;
    color:var(--primary-color);
   padding-block: 1.6rem;
