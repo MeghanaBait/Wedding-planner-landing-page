@@ -62,3 +62,25 @@ AOS.init({
   duration:800,
   delay:400
 });
+
+
+let form = document.querySelector("form");
+form.addEventListener('submit', (e)=>{
+  document.querySelector("#submit").value = "Submitting...";
+  e.preventDefault();
+  let data = new FormData(form);
+  fetch('https://script.google.com/macros/s/AKfycbye2Tn8_H2gGBBuXzUYAoWw7fywMd27JoKPOoCIR_RtL8Bh455pJ7WKCCYlwUpGk8tiMg/exec',{
+    method:"POST",
+    body:data
+  })
+  .then(res => res.text())
+  .then(data => {
+    alert("Thanks for reaching us.");
+    document.querySelector("#submit").value="Submit";
+  })
+  .catch(error =>{
+    alert("please submit your details again");
+    console.error("Error submitting the form:", error);
+  });
+
+})

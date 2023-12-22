@@ -1,16 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes:wght@100;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap");
 
 :root{
-   --main-color:#FEC260;
-   --primary-color: #404068;
+   --main-color:#EF9A53;
+   --primary-color: #702080;
    --white:#fff;
-   --bg: #f7f0ed;
+   --bg: #FDE5EC;
    --light-black:#333;
+   --home-h3:Great Vibes;
    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
 }
 
 *{
-   font-family: 'Poppins', sans-serif;
+   font-family: 'Roboto', sans-serif;
    margin:0; padding:0;
    box-sizing: border-box;
    outline: none; border:none;
@@ -70,7 +72,6 @@ section{
     margin-top: 1rem;
     padding: .8rem 2.8rem;
     border-radius: 5rem;
-    border-top-left-radius: 0;
     border: 0.2rem solid var(--main-color);
     cursor: pointer;
     color: var(--main-color);
@@ -137,7 +138,8 @@ section{
 }
 
 .header .navbar a{
-   font-size: 1.7rem;
+   font-size: 2rem;
+   font-weight: 600;
    margin-left: 2rem;
    color:var(--primary-color);
   padding-block: 1.6rem;
@@ -152,7 +154,7 @@ section{
    content: "";
    position: absolute;
    height: .3rem;
-   border-block: 1px solid var(--main-color);
+   /* border-block: 1px solid var(--main-color); */
    bottom: .5rem;
    width: 100%;
    transform: scaleX(0);
@@ -192,7 +194,7 @@ section{
     display: flex;
     align-items: center;
    justify-content: center;
-   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url('images/home.jpg') no-repeat;
+   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url('./images/home.jpeg') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -203,7 +205,7 @@ section{
 
 .home .content h3 {
     font-size: 6rem;
-    text-transform: uppercase;
+    font-family: var(--home-h3);
     font-weight: normal;
     color:#fff;
     padding-bottom: 3.5rem;
@@ -248,16 +250,16 @@ section{
  
  .services .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap:2rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap:4rem;
  }
  
  .services .box-container .box{
     text-align: center;
-    padding: 4rem;
+    padding: 1rem;
     background-color: var(--white);
     box-shadow: var(--box-shadow);
-    border-radius: 5rem;
+    border-radius: 2rem;
  }
  
  .services .box-container .box img{
@@ -272,12 +274,12 @@ section{
  
  .services .box-container .box h3{
     font-size: 2rem;
-    padding:1rem 0;
+    padding-top:0.7rem 0;
     color:var(--primary-color);
  }
  
  .services .box-container .box p{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color:var(--light-black);
     line-height: 2;
  }
@@ -429,15 +431,15 @@ section{
 
 /* end */
 
-/* team */
+/* Designs */
 
-.team .box-container{
+.design .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     gap:4rem;
  }
  
- .team .box-container .box{
+ .design .box-container .box{
     border-radius: .5rem;
     background: var(--white);
     text-align: center;
@@ -445,7 +447,7 @@ section{
     box-shadow: var(--box-shadow);
  }
  
- .team .box-container .box img{
+ .design .box-container .box img{
     width: 100%;
     object-fit: cover;
     margin-bottom: 1rem;
@@ -453,32 +455,30 @@ section{
     border: .7rem solid var(--white);
  }
  
- .team .box-container .box h3{
+ .design .box-container .box h3{
     font-size: 2rem;
     color:var(--primary-color);
  }
  
- .team .box-container .box p{
+ .design .box-container .box p{
     font-size: 1.5rem;
     color:var(--main-color);
  }
  
- .team .box-container .box .share{
+ .design .box-container .box .share{
     margin-top: .5rem;
  }
  
- .team .box-container .box .share a{
-    padding: 1rem 2rem;
-    line-height: 4rem;
-    font-size: 1.7rem;
-    background: var(--primary-color);
-    border-radius: 2rem;
-    color:var(--white);
+ .design .box-container .box .share a{
+   display: inline-block;
+    padding: .5rem 1rem;
+    line-height: 2rem;
+    font-size: 1.2rem;
     margin: .5rem 1rem;
  }
  
- .team .box-container .box .share a:hover{
-    background: var(--main-color);
+ .design .box-container .box .share a:hover{
+    color: white;
  }
 
  /* end */
@@ -510,7 +510,6 @@ section{
    height: 20rem;
    resize: none;
 }
-
 .contact form .inputBox input,
 .contact form .inputBox select{
    width: 49%;
@@ -521,6 +520,7 @@ section{
 
 .footer{
    background: var(--white);
+   
  }
 
  .footer .box-container {
@@ -533,6 +533,25 @@ section{
   padding: 1rem 0;
 }
 
+.footer .box-container .box-1{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items:center;
+ }
+
+.footer .box-container .box-1 img {
+   margin:0.5rem;
+   padding: 0.5rem;
+   width:8rem;
+   height: 8rem;
+}
+
+ .footer .box-container .box-1 h3 {
+   font-size: 2.2rem;
+   color: var(--primary-color);
+   padding: 1rem 0;
+ }
  .footer .box-container .box h3 {
    font-size: 2.2rem;
    color: var(--primary-color);
@@ -547,10 +566,11 @@ section{
  }
  
  .footer .box-container .box a {
+   text-transform: none;
    display: block;
    font-size: 1.4rem;
    color: var(--main-color);
-   padding: 1rem 0;
+   padding: .2rem 0;
  }
  
  .footer .box-container .box a i {
@@ -562,6 +582,9 @@ section{
    color: var(--primary-color);
  }
  
+ .footer.credit a{
+   text-decoration: none;
+ }
  .footer .credit {
    margin-top: 2.5rem;
    padding: 1rem;
@@ -569,11 +592,11 @@ section{
    border-top: 0.1rem solid #cecece;
    text-align: center;
    color: var(--main-color);
-   font-size: 2rem;
+   font-size: 1.5rem;
  }
  
- .footer .credit span {
-   color: var(--primary-color);
+ .footer .credit a span {
+   color: var(--main-color);
  }
 
 /* end */
